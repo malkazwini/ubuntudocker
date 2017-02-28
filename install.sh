@@ -7,7 +7,6 @@ sudo apt-get update
 apt-cache policy docker-engine
 sleep 5
 sudo apt-get install -y docker-engine
-sudo systemctl status docker
 echo "####### Removing sudo requirement to run Docker ##################" 
 sudo usermod -aG docker $(whoami)
 
