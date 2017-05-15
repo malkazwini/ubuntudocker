@@ -10,7 +10,8 @@ sudo apt-get install -y docker-engine
 echo "####### Removing sudo requirement to run Docker ##################" 
 sudo usermod -aG docker $(whoami)
 #Pull portainer and bind mount to Docker socket to manage local Docker engine
-echo "Installing Portainer"
-docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+#echo "Installing Portainer"
+#docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 echo "Rebooting"
+read -p "Press enter to continue"
 sudo reboot
